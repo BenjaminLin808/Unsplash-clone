@@ -1,42 +1,30 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Xa5QZ {
+  --font-smoothing: auto;
+  --background-color: #fff;
+  --button-primary-background-color: #111;
+  --button-primary-background-color-hover: #222;
+  --button-primary-text-color: #fff;
+  --faded-text-color: #d1d1d1;
+  --form-input-radio-button-border-color: #d1d1d1;
+  --form-input-radio-button-checked-border-color: #007fff;
+  --form-input-radio-button-checked-dot-color: #007fff;
+  --link-text-color-hover: #111;
+  --link-text-color: #767676;
+  --placeholder-background-color: #0000000d;
+  --small-faded-text-color: #767676;
+  --text-color: #111;
+  --demos-alt-background: #eee;
+  --demos-sidebar-active-entry-link: green;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue,
+    Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
 }
