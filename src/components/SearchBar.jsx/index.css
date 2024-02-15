@@ -1,0 +1,106 @@
+.searchBar {
+  flex-grow: 1;
+  align-items: center;
+  position: relative;
+  color: #111;
+  border-radius: 24px;
+  height: 40px;
+  transition: all 0.1s ease-in-out;
+  background-color: #eee;
+  box-shadow: 0 0 0 1px #eee;
+  display: flex;
+}
+
+.buttonContainer {
+  align-items: center;
+  display: flex;
+  background-color: initial;
+  font-weight: inherit;
+  text-align: inherit;
+  overflow: visible;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  border: none;
+}
+
+.icon {
+  fill: #767676;
+  box-sizing: initial;
+  transition: fill 0.1s ease-in-out;
+  height: 20px;
+}
+
+.icon:hover {
+  fill: #111;
+}
+
+.searchBox {
+  flex-grow: 1;
+  display: flex;
+  box-sizing: border-box;
+  color: #111;
+  font-size: 14px;
+  line-height: 1.4285714286;
+}
+
+.searchBox input {
+  box-shadow: none;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  background: none;
+  border: none;
+  color: #111;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0;
+  overflow: visible;
+  outline: none;
+  letter-spacing: inherit;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.searchBox :hover {
+  color: #767676;
+}
+
+.login_submit_container {
+  align-items: center;
+  column-gap: 8px;
+  display: flex;
+  color: #111;
+}
+
+.loginButton {
+  height: 32px;
+  line-height: 30px;
+  padding: 0 11px;
+  color: #767676;
+  border: 1px solid #0000;
+}
+
+.submitButton {
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  color: #767676;
+  height: 32px;
+  line-height: 30px;
+  padding: 0 11px;
+  fill: currentColor;
+  border-radius: 4px;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  -webkit-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  text-align: center;
+  font-weight: 500;
+}
+
+.submitButton:hover {
+  background-color: #f8f8f8;
+  border: 1px solid #111;
+  color: #111;
+}

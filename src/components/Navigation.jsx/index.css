@@ -1,13 +1,14 @@
 nav {
-  height: 60px;
-  width: 100%;
   display: flex;
-  align-items: center;
+  height: 62px;
+  padding-block: 11px;
+  background-color: #fff;
+  padding-inline: 20px;
+  color: #111;
 }
 
-a {
-  display: flex;
-  align-items: center;
+nav a {
+  cursor: pointer;
   text-decoration: none;
   color: inherit;
   text-decoration-skip-ink: auto;
@@ -19,4 +20,17 @@ a {
   width: 32px;
   margin: 10px;
   margin-top: -2px;
+}
+
+.divider {
+  height: 100%;
+  width: 16px;
+  display: block;
+}
+
+.divider2 {
+  align-self: center;
+  background-color: #c4c4c4;
+  height: 16px;
+  width: 1px;
 }
