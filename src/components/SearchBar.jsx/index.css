@@ -77,7 +77,10 @@
   line-height: 30px;
   padding: 0 11px;
   color: #767676;
-  border: 1px solid #0000;
+}
+
+.loginButton:hover {
+  color: #111;
 }
 
 .submitButton {

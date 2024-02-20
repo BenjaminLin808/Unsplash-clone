@@ -2,17 +2,17 @@ import React from "react";
 
 import "./index.css";
 
-const Links = ({ links }) => {
+const MainLinks = ({ links }) => {
   console.log(links);
   console.log(links[0].text);
   return (
-    <div className="linksContainer">
+    <div className="mainLinks">
       <ul className="ulist">
         {links.map((link) => (
           <li key={link.text}>
             <a
               href={`/${link.text.toLowerCase()}`}
-              className={link.special ? "special" : ""}
+              className={link.special ? "link special" : "link"}
             >
               {link.text}
             </a>
@@ -23,4 +23,4 @@ const Links = ({ links }) => {
   );
 };
 
-export default Links;
+export default MainLinks;

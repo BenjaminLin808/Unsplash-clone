@@ -1,0 +1,10 @@
+.linksContainer {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.homeLinks {
+  display: flex;
+  align-items: center;
+}

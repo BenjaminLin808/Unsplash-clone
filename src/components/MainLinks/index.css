@@ -1,4 +1,4 @@
-.linksContainer {
+.mainLinks {
   display: flex;
 }
 
@@ -11,8 +11,12 @@
   align-items: center;
 }
 
-.llist {
-  display: contents;
+.link {
+  color: #c4c4c4;
+}
+
+.link:hover {
+  color: #000;
 }
 
 .special {
