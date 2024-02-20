@@ -1,0 +1,41 @@
+.linksContainer {
+  display: flex;
+}
+
+.ulist {
+  display: flex;
+  column-gap: 24px;
+  padding-inline: 16px;
+  list-style: none;
+  padding-left: 0;
+  align-items: center;
+}
+
+.llist {
+  display: contents;
+}
+
+.special {
+  background: linear-gradient(135deg, #fa00ff, #00e0ff 50%, #fa00ff);
+  animation: special 3s linear infinite alternate-reverse;
+  animation-play-state: paused;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 500%;
+  color: #0000;
+}
+
+.special:hover {
+  animation-play-state: running;
+  color: #0000;
+}
+
+@keyframes special {
+  0% {
+    background-position: 100% 0;
+  }
+
+  to {
+    background-position: 12% 100%;
+  }
+}
