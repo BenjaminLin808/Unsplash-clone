@@ -62,7 +62,11 @@ const NavigationLinks = () => {
         ></div>
         <div className="slider">
           <div className="leftButtonContainer">
-            <button type="button" title="scroll list to the left">
+            <button
+              className="leftButton"
+              type="button"
+              title="scroll list to the left"
+            >
               <svg
                 class="DG_Wq"
                 width="24"
@@ -77,7 +81,11 @@ const NavigationLinks = () => {
             </button>
           </div>
           <div className="rightButtonContainer">
-            <button>
+            <button
+              className="rightButton"
+              type="button"
+              title="scroll list to the right"
+            >
               <svg
                 width="24"
                 height="24"
