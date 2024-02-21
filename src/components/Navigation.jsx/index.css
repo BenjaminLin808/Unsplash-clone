@@ -38,6 +38,7 @@ nav a {
   background-color: #c4c4c4;
   height: 16px;
   width: 1px;
+  justify-content: center;
 }
 
 .divider3 {
