@@ -4,11 +4,11 @@ import IconButton from "../IconButton";
 
 import "./index.css";
 
-const SearchBar = () => {
+const SearchBar = ({ style }) => {
   const [inputValue, setInputValue] = useState("");
 
   return (
-    <form className="searchBar">
+    <form className={style ? "bannerSearch" : "searchBar"}>
       <IconButton icon="MagnifyGlass" className="buttonContainer" />
       <div className="searchBox">
         <input

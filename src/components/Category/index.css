@@ -1,0 +1,12 @@
+.category {
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  padding: 3px 8px;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: border 0.1s ease-in-out, color 0.1s ease-in-out;
+  font-weight: 500;
+  color: var(--link-text-color);
+  text-decoration-skip-ink: auto;
+  background-color: initial;
+}

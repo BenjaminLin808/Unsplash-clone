@@ -107,3 +107,15 @@
   border: 1px solid #111;
   color: #111;
 }
+
+.bannerSearch {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #111;
+  border-radius: 5px;
+  height: 50px;
+  transition: all 0.1s ease-in-out;
+  background-color: #eee;
+  box-shadow: 0 0 0 1px #eee;
+}
