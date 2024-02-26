@@ -1,7 +1,9 @@
 .bannerContainer {
   padding-top: 40px;
-  margin-left: 300px;
-  margin-right: 300px;
+  margin-inline: auto;
+  max-width: 1320px;
+  width: 100%;
+  padding-inline: 20px;
   grid-template-columns: 1fr 280px 280px;
   display: grid;
   gap: 24px;

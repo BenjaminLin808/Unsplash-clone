@@ -39,3 +39,17 @@ button {
   margin: 0;
   overflow: visible;
 }
+div {
+  display: block;
+}
+a {
+  color: #767676;
+  text-decoration: none;
+  cursor: pointer;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}

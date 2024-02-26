@@ -45,7 +45,6 @@ const Navigation = () => {
         <div className="divider"></div>
         <IconButton icon="Hamburger" className="buttonContainer" />
       </nav>
-      <NavigationLinks />
     </div>
   );
 };
