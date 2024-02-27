@@ -3,7 +3,7 @@ import "./index.css";
 import SearchBar from "../SearchBar.jsx";
 import Card from "../Card/index.jsx";
 import Category from "../Category/index.jsx";
-const Banner = () => {
+const Banner = ({ search }) => {
   return (
     <div className="bannerContainer">
       <div className="bannerSubContainer">
@@ -33,7 +33,7 @@ const Banner = () => {
             </ul>
           </div>
         </div>
-        <SearchBar style={true} />
+        <SearchBar style={true} search={search} />
       </div>
       <Card padding={true}>
         <div className="categoryContainer">

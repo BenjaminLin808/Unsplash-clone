@@ -3,20 +3,10 @@ import "./index.css";
 
 const Image = ({ image }) => {
   return (
-    <figure
-      itemprop="image"
-      itemscope=""
-      itemtype="https://schema.org/ImageObject"
-      data-test="photo-grid-masonry-figure"
-    >
+    <figure data-test="photo-grid-masonry-figure">
       <div className="MbNnd">
         <div className="imageSubContainer">
-          <a
-            className="imageSubContainerTag"
-            itemprop="contentUrl"
-            title=""
-            href="/"
-          >
+          <a className="imageSubContainerTag" title="" href="/">
             <div className="imageSubContainer">
               <div
                 style={{ backgroundColor: "#f3f3f3" }}
@@ -25,14 +15,11 @@ const Image = ({ image }) => {
 
               <div className="imageWrapper2">
                 <img
-                  alt="a table topped with lots of papers on top of a wooden table"
-                  src="https://images.unsplash.com/photo-1708793699440-67fa853abd4d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8"
-                  sizes="..."
-                  itemprop="thumbnailUrl"
+                  alt={image.title}
+                  src={image.url_m}
                   loading="lazy"
                   data-perf="lazy-loaded-img"
                   className="image"
-                  style={{ aspectRatio: "3840 / 5760" }}
                   data-test="photo-grid-masonry-img"
                 />
               </div>
@@ -87,14 +74,13 @@ const Image = ({ image }) => {
                     <span>
                       <div>
                         <span className="user">
-                          <a href="/@joonas1233">
+                          <a href="/">
                             <div className="userImg">
                               <div>
                                 <img
                                   className="D1hjc"
                                   loading="lazy"
                                   src="https://images.unsplash.com/profile-1708793968495-b24b793a721eimage?bg=fff&amp;crop=faces&amp;dpr=1&amp;h=32&amp;w=32&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3"
-                                  srcSet="https://images.unsplash.com/profile-1708793968495-b24b793a721eimage?bg=fff&amp;crop=faces&amp;dpr=2&amp;h=32&amp;w=32&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3 2x"
                                   alt="Go to Joonas Sild's profile"
                                   width="32"
                                   height="32"
@@ -105,9 +91,9 @@ const Image = ({ image }) => {
                           <div className="username">
                             <a
                               className="N2odk RZQOk eziW_ KHq0c cl4O9 fD_Xr eziW_"
-                              href="/@joonas1233"
+                              href="/"
                             >
-                              Joonas Sild
+                              {image.owner}
                             </a>
                             <div className="AVon2 RZQOk iOqvK J8PMN"></div>
                           </div>

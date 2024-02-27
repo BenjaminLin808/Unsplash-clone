@@ -7,7 +7,7 @@ import MainLinks from "../MainLinks/index.jsx";
 import "./index.css";
 import NavigationLinks from "../NavigationLinks/index.jsx";
 
-const Navigation = () => {
+const Navigation = ({ search }) => {
   const links = [
     {
       text: "Explore",
@@ -28,7 +28,7 @@ const Navigation = () => {
       <nav>
         <Logo />
         <div className="divider"></div>
-        <SearchBar />
+        <SearchBar search={search} />
         <div className="divider"></div>
         <MainLinks links={links} />
         <div className="dividerContainer">

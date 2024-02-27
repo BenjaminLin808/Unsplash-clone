@@ -3,8 +3,6 @@ import React from "react";
 import "./index.css";
 
 const MainLinks = ({ links }) => {
-  console.log(links);
-  console.log(links[0].text);
   return (
     <div className="mainLinks">
       <ul className="ulist">
