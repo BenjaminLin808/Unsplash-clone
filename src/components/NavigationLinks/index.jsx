@@ -1,13 +1,50 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./index.css";
 import Link from "../Link";
 
 const NavigationLinks = () => {
   const [activeLink, setActiveLink] = useState("Editorial");
+  const [leftButtonActive, setLeftButtonActive] = useState(false);
+  const [rightButtonActive, setRightButtonActive] = useState(true);
+  const sliderRef = useRef(null);
 
   const handleLinkClick = (link, event) => {
     event.preventDefault();
     setActiveLink(link);
+  };
+
+  const manageIcons = () => {
+    if (sliderRef.current.scrollLeft > 0) {
+      setLeftButtonActive(true);
+    } else {
+      setLeftButtonActive(false);
+    }
+
+    let maxScrollValue =
+      sliderRef.current.scrollWidth - sliderRef.current.clientWidth;
+
+    if (sliderRef.current.scrollLeft >= maxScrollValue) {
+      setRightButtonActive(false);
+    } else {
+      setRightButtonActive(true);
+    }
+    console.log("scrollWidth", sliderRef.current.scrollWidth);
+    console.log("clientWidth", sliderRef.current.clientWidth);
+  };
+
+  const handleScrollLeft = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollLeft -= 100;
+      manageIcons();
+    }
+  };
+
+  const handleScrollRight = () => {
+    console.log(sliderRef.current);
+    if (sliderRef.current) {
+      sliderRef.current.scrollLeft += 100;
+      manageIcons();
+    }
   };
 
   const links = [
@@ -33,39 +70,48 @@ const NavigationLinks = () => {
     "Current Events",
   ];
 
+  const mainlinks = ["Editorial", "Unsplash+"];
+
   return (
     <>
       <div className="linksContainer">
         <div className="homeLinks">
-          <Link
-            text="Editorial"
-            className={
-              activeLink === "Editorial"
-                ? "activeLinkContainer"
-                : "linkContainer"
-            }
-            onClick={(e) => handleLinkClick("Editorial", e)}
-          />
-          <Link
-            text="Unsplash+"
-            className={
-              activeLink === "Unsplash+"
-                ? "activeLinkContainer"
-                : "linkContainer"
-            }
-            onClick={(e) => handleLinkClick("Unsplash+", e)}
-          />
+          <ul>
+            {mainlinks.map((link, index) => {
+              return (
+                <Link
+                  text={link}
+                  key={index}
+                  className={
+                    activeLink === link
+                      ? "activeLinkContainer"
+                      : "linkContainer"
+                  }
+                  onClick={(e) => handleLinkClick(link, e)}
+                />
+              );
+            })}
+          </ul>
         </div>
         <div
           className="divider2"
           style={{ margin: "20px", height: "30px" }}
         ></div>
-        <div className="slider">
+        <div
+          className={
+            leftButtonActive
+              ? rightButtonActive
+                ? "slider"
+                : "slider scrollRight"
+              : "slider scrollLeft"
+          }
+        >
           <div className="leftButtonContainer">
             <button
-              className="leftButton"
+              className={leftButtonActive ? "leftButton active" : "leftButton"}
               type="button"
               title="scroll list to the left"
+              onClick={handleScrollLeft}
             >
               <svg
                 width="24"
@@ -81,9 +127,12 @@ const NavigationLinks = () => {
           </div>
           <div className="rightButtonContainer">
             <button
-              className="rightButton"
+              className={
+                rightButtonActive ? "rightButton active" : "rightButton"
+              }
               type="button"
               title="scroll list to the right"
+              onClick={handleScrollRight}
             >
               <svg
                 width="24"
@@ -97,18 +146,22 @@ const NavigationLinks = () => {
               </svg>
             </button>
           </div>
-          {links.map((link, index) => {
-            return (
-              <Link
-                text={link}
-                key={index}
-                className={
-                  activeLink === link ? "activeLinkContainer" : "linkContainer"
-                }
-                onClick={(e) => handleLinkClick(link, e)}
-              />
-            );
-          })}
+          <ul className="sliderLinks" ref={sliderRef}>
+            {links.map((link, index) => {
+              return (
+                <Link
+                  text={link}
+                  key={index}
+                  className={
+                    activeLink === link
+                      ? "activeLinkContainer"
+                      : "linkContainer"
+                  }
+                  onClick={(e) => handleLinkClick(link, e)}
+                />
+              );
+            })}
+          </ul>
         </div>
       </div>
     </>

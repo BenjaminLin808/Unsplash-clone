@@ -2,7 +2,17 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  /* border: 1px solid red; */
+}
+
+.linksContainer ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sliderLinks {
+  overflow-x: scroll;
 }
 
 .homeLinks {
@@ -26,14 +36,23 @@
 .slider {
   display: flex;
   position: relative;
+  overflow-x: auto;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-/*.slider::before {
+.slider ul::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+
+.slider::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 30%;
   height: 100%;
   background: linear-gradient(
     270deg,
@@ -42,14 +61,28 @@
     rgba(255, 255, 255, 1)
   );
   z-index: 1;
-} */
+}
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 1) 90%,
+    rgba(255, 255, 255, 1)
+  );
+  z-index: 1;
+}
 
 .leftButton {
   padding-left: 8px;
   padding-right: 8px;
   color: "#767676";
   align-items: center;
-  display: flex;
   height: 40px;
   justify-content: center;
   background-color: initial;
@@ -59,6 +92,8 @@
   text-align: inherit;
   position: absolute;
   left: 0;
+  z-index: 2;
+  display: none;
 }
 
 .rightButton {
@@ -66,7 +101,6 @@
   padding-right: 8px;
   color: "#767676";
   align-items: center;
-  display: flex;
   height: 40px;
   justify-content: center;
   background-color: initial;
@@ -76,4 +110,24 @@
   text-align: inherit;
   position: absolute;
   right: 0;
+  z-index: 2;
+  display: none;
+}
+
+.leftButton.active {
+  display: flex;
+}
+.rightButton.active {
+  display: flex;
+}
+
+.scrollLeft {
+}
+.scrollLeft::before {
+  background: transparent;
+}
+.scrollRight {
+}
+.scrollRight::after {
+  background: transparent;
 }
